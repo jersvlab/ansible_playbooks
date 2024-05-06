@@ -1,0 +1,14 @@
+---
+- name: Configure Zabbix Agent
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Clean DNF cache
+      command: dnf clean all
+
+    - name: Update 
+      command: dnf update
+	
+    - name: Upgrade 
+      command: dnf upgrade
